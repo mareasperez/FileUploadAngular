@@ -1,0 +1,14 @@
+<h1>File Upload</h1>
+
+<label>Select a File (&lt; 1MB)</label><br/>
+<input type="file" (change)="onFileChange($event)" /><br/>
+<button (click)="uploadFile()" [disabled]="!theFile">Upload File</button><br/><br/>
+
+<!-- ** BEGIN: INFORMATION MESSAGE AREA ** -->
+<div *ngIf="messages.length > 0">
+    <span *ngFor="let msg of messages">
+        {{msg}}
+        <br />
+        </span>
+    </div>
+    <!-- ** END: INFORMATION MESSAGE AREA ** -->
